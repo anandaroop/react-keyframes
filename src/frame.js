@@ -28,7 +28,7 @@ export default class Frame extends React.Component {
     const props = {}
 
     Object.keys(this.props).forEach(k => {
-      if (Frame.propTypes[k]) {
+      if (Frame.propTypes[k] && k !== 'duration') {
         return
       }
       props[k] = this.props[k]
